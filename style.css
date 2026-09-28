@@ -1,0 +1,901 @@
+/* =========================
+   ОБЩИЕ СТИЛИ
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #F3EFE7;
+    color: #241d18;
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+
+/* =========================
+   ГЛАВНАЯ
+========================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 28px 4vw;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* верхняя строка */
+
+.hero-top {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-brand {
+    justify-self: start;
+    font-size: 15px;
+}
+
+.hero-year {
+    justify-self: end;
+    font-size: 15px;
+}
+
+
+/* меню */
+
+.hero-top nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.hero-top nav a {
+    color: #241d18;
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.2s ease;
+}
+
+.hero-top nav a:hover {
+    opacity: 0.45;
+}
+
+
+/* центральная часть */
+
+.hero-content {
+    width: 88vw;
+    max-width: 1400px;
+    min-height: calc(100vh - 100px);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    align-items: center;
+    gap: 7vw;
+}
+
+
+/* текст */
+
+.hero-text {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-text h1 {
+    margin: 0;
+
+    font-size: 100px;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    font-weight: 400;
+}
+
+.hero-subtitle {
+    margin: 42px 0 0;
+
+    font-size: 19px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.hero-description {
+    margin-top: 45px;
+    margin-left: 5px;
+}
+
+.hero-description p {
+    margin: 0 0 34px;
+
+    font-size: 15px;
+    line-height: 1.7;
+    color: #5D554D;
+}
+
+
+/* фотография */
+
+.hero-photo {
+    width: min(100%, 500px);
+    justify-self: end;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-photo img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 3 / 4;
+
+    object-fit: cover;
+
+    border: 1px solid rgba(36, 29, 24, 0.15);
+}
+
+
+/* нижняя надпись */
+
+.hero-bottom {
+    position: absolute;
+    left: 4vw;
+    bottom: 28px;
+    z-index: 10;
+}
+
+.hero-bottom span {
+    font-size: 13px;
+    color: #74785A;
+}
+
+
+/* =========================
+   ВНУТРЕННИЕ СТРАНИЦЫ
+========================= */
+
+.page-header {
+    padding: 38px 6vw 0;
+}
+
+.page-nav {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 17px;
+}
+
+.page-nav a {
+    color: #74785A;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.page-nav a:hover {
+    opacity: 0.55;
+}
+
+.page-nav .active {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.page-nav span {
+    color: #AAA991;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    margin-left: 6vw;
+    margin-top: 105px;
+}
+
+.intro h1 {
+    margin: 0;
+
+    font-size: clamp(52px, 6vw, 88px);
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+
+    text-align: left;
+}
+
+.intro p {
+    margin: 28px 0 0;
+
+    font-size: 16px;
+    line-height: 1.4;
+
+    color: #5D554D;
+}
+
+
+/* =========================
+   THINGS I LOVE
+========================= */
+
+.love-block {
+    width: 70vw;
+    margin: 120px auto 0;
+
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.love-image {
+    width: 340px;
+    flex-shrink: 0;
+}
+
+.love-image img {
+    display: block;
+
+    width: 100%;
+    height: 450px;
+
+    object-fit: cover;
+}
+
+.love-text {
+    max-width: 330px;
+    margin-top: 60px;
+}
+
+.love-text h2 {
+    margin: 0;
+
+    font-size: 42px;
+    font-weight: 400;
+
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.love-text p {
+    margin: 28px 0;
+
+    font-size: 17px;
+    line-height: 1.5;
+
+    color: #5D554D;
+}
+
+.love-text a {
+    color: #74785A;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.love-text a:hover {
+    color: #241d18;
+}
+
+.cat {
+    margin-top: 180px;
+}
+
+.cat .love-image {
+    transform: translateX(70px);
+}
+
+
+/* silence */
+
+.silence {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    margin-top: 100px;
+}
+
+.silence h2 {
+    margin: 0;
+
+    font-size: clamp(48px, 6vw, 82px);
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+
+.silence p {
+    margin: 35px 0 0;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #5D554D;
+}
+
+.silence span {
+    margin-top: 35px;
+
+    font-size: 14px;
+    color: #74785A;
+}
+
+
+/* other things */
+
+.other-things {
+    min-height: 75vh;
+
+    padding: 120px 8vw 160px;
+
+    box-sizing: border-box;
+}
+
+.other-things h2 {
+    margin: 0;
+
+    font-size: clamp(32px, 4vw, 58px);
+    font-weight: 400;
+
+    letter-spacing: -0.03em;
+}
+
+.things-list {
+    position: relative;
+
+    height: 430px;
+
+    margin-top: 80px;
+
+    max-width: 900px;
+}
+
+.thing {
+    position: absolute;
+
+    font-size: 18px;
+
+    color: #74785A;
+    text-decoration: none;
+}
+
+.thing:hover {
+    color: #241d18;
+}
+
+.thing-1 {
+    top: 20px;
+    left: 5%;
+}
+
+.thing-2 {
+    top: 110px;
+    left: 48%;
+}
+
+.thing-3 {
+    top: 220px;
+    left: 20%;
+}
+
+.thing-4 {
+    top: 300px;
+    left: 65%;
+}
+
+.thing-5 {
+    top: 150px;
+    left: 78%;
+}
+
+.thing-6 {
+    top: 370px;
+    left: 42%;
+}
+
+
+/* =========================
+   MY LITTLE STORY
+========================= */
+
+.story-intro {
+    margin-left: 6vw;
+    margin-top: 105px;
+}
+
+.story-intro h1 {
+    margin: 0;
+
+    font-size: clamp(52px, 6vw, 88px);
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+}
+
+.story-intro p {
+    margin: 35px 0 0;
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    color: #5D554D;
+}
+
+.story-text {
+    width: 52vw;
+    max-width: 700px;
+
+    margin: 150px 0 0 22vw;
+}
+
+.story-text p {
+    margin: 0 0 70px;
+
+    font-size: 21px;
+    line-height: 1.7;
+
+    color: #5D554D;
+}
+
+.story-images {
+    position: relative;
+
+    width: 70vw;
+    height: 600px;
+
+    margin: 80px auto 0;
+}
+
+.story-images img {
+    position: absolute;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.story-images img:first-child {
+    width: 300px;
+    height: 390px;
+
+    left: 8%;
+    top: 20px;
+}
+
+.story-images img:last-child {
+    width: 250px;
+    height: 330px;
+
+    right: 8%;
+    top: 180px;
+}
+
+.story-ending {
+    min-height: 45vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.story-ending p {
+    margin: 0;
+
+    font-size: 32px;
+    font-weight: 400;
+
+    letter-spacing: -0.03em;
+
+    color: #74785A;
+}
+
+
+/* =========================
+   BOOKS
+========================= */
+
+.books-intro {
+    margin-left: 6vw;
+    margin-top: 105px;
+}
+
+.books-intro h1 {
+    margin: 0;
+
+    font-size: clamp(52px, 6vw, 88px);
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+}
+
+.books-intro p {
+    margin: 28px 0 0;
+
+    font-size: 16px;
+    line-height: 1.4;
+
+    color: #5D554D;
+}
+
+.currently-reading {
+    width: 70vw;
+    margin: 150px auto 0;
+}
+
+.book-label {
+    display: block;
+
+    margin-bottom: 35px;
+
+    font-size: 20px;
+    color: #74785A;
+
+    text-transform: lowercase;
+}
+
+.book-main {
+    display: flex;
+    align-items: center;
+
+    gap: 70px;
+}
+
+.book-cover {
+    width: 230px;
+    flex-shrink: 0;
+}
+
+.book-cover img {
+    display: block;
+
+    width: 100%;
+    height: 340px;
+
+    object-fit: cover;
+}
+
+.book-info {
+    max-width: 360px;
+}
+
+.book-info h2 {
+    margin: 0;
+
+    font-size: 42px;
+    font-weight: 400;
+
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.book-author {
+    margin: 14px 0 0;
+
+    font-size: 14px;
+    color: #74785A;
+}
+
+.book-note {
+    margin: 35px 0 0;
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    color: #5D554D;
+}
+
+.book-list {
+    width: 70vw;
+
+    margin: 180px auto 0;
+
+    padding-bottom: 160px;
+}
+
+.book-list > h2 {
+    margin: 0;
+
+    font-size: 36px;
+    font-weight: 400;
+
+    letter-spacing: -0.03em;
+}
+
+.books-grid {
+    position: relative;
+
+    height: 420px;
+
+    margin-top: 70px;
+}
+
+.book-item {
+    position: absolute;
+}
+
+.book-item span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 12px;
+    color: #AAA991;
+}
+
+.book-item h3 {
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 400;
+
+    line-height: 1.1;
+}
+
+.book-item p {
+    margin: 10px 0 0;
+
+    font-size: 14px;
+    color: #5D554D;
+}
+
+.book-item:nth-child(1) {
+    top: 20px;
+    left: 8%;
+}
+
+.book-item:nth-child(2) {
+    top: 130px;
+    left: 48%;
+}
+
+.book-item:nth-child(3) {
+    top: 260px;
+    left: 20%;
+}
+
+.book-item:nth-child(4) {
+    top: 340px;
+    left: 58%;
+}
+
+
+/* =========================
+   THOUGHTS
+========================= */
+
+.thoughts-intro {
+    margin-left: 6vw;
+    margin-top: 105px;
+}
+
+.thoughts-intro h1 {
+    margin: 0;
+
+    font-size: clamp(52px, 6vw, 88px);
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+}
+
+.thoughts-intro p {
+    margin: 28px 0 0;
+
+    font-size: 16px;
+    line-height: 1.4;
+
+    color: #5D554D;
+}
+
+.thought-cloud {
+    position: relative;
+
+    width: 70vw;
+    height: 620px;
+
+    margin: 60px auto 0;
+}
+
+.thought {
+    position: absolute;
+
+    width: 240px;
+
+    transition:
+        left 1s ease,
+        top 1s ease,
+        transform 1s ease,
+        opacity 0.6s ease;
+}
+
+.thought span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 11px;
+    color: #AAA991;
+}
+
+.thought h2 {
+    margin: 0;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    letter-spacing: -0.03em;
+}
+
+.thought p {
+    margin: 16px 0 0;
+
+    font-size: 15px;
+    line-height: 1.5;
+
+    color: #5D554D;
+}
+
+.thought-1 {
+    left: 40%;
+    top: 170px;
+    transform: rotate(-8deg);
+}
+
+.thought-2 {
+    left: 43%;
+    top: 200px;
+    transform: rotate(6deg);
+}
+
+.thought-3 {
+    left: 39%;
+    top: 215px;
+    transform: rotate(-3deg);
+}
+
+.thought-4 {
+    left: 42%;
+    top: 185px;
+    transform: rotate(10deg);
+}
+
+.thought-5 {
+    left: 41%;
+    top: 215px;
+    transform: rotate(-12deg);
+}
+
+.thought-6 {
+    left: 44%;
+    top: 250px;
+    transform: rotate(4deg);
+}
+
+.thought-hint {
+    position: absolute;
+
+    left: 50%;
+    top: 500px;
+
+    transform: translateX(-50%);
+
+    font-size: 13px;
+    color: #74785A;
+
+    transition: opacity 0.5s ease;
+}
+
+
+/* =========================
+   АДАПТАЦИЯ ДЛЯ МАЛЕНЬКОГО ЭКРАНА
+========================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        padding: 22px 5vw;
+    }
+
+    .hero-top {
+        grid-template-columns: 1fr auto;
+    }
+
+    .hero-top nav {
+        display: none;
+    }
+
+    .hero-year {
+        display: block;
+    }
+
+    .hero-content {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 70px 0 100px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(70px, 22vw, 130px);
+    }
+
+    .hero-photo {
+        width: 75vw;
+        max-width: 420px;
+        justify-self: center;
+    }
+
+    .hero-description {
+        margin-top: 50px;
+    }
+
+    .hero-bottom {
+        bottom: 22px;
+    }
+
+    .page-nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .love-block {
+        width: 86vw;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .love-image {
+        width: 80vw;
+    }
+
+    .cat .love-image {
+        transform: none;
+    }
+
+    .book-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .currently-reading,
+    .book-list {
+        width: 84vw;
+    }
+
+    .story-text {
+        width: 75vw;
+        margin-left: 12vw;
+    }
+}
